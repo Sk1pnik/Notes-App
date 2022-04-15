@@ -1,3 +1,14 @@
-package com.skipnik.petproject.noteapp.model
+package com.skipnik.petproject.noteapp.database
 
-data class Note(val text: String)
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+
+@Entity
+data class Note(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
+    val text: String,
+)
+
+
